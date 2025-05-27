@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Governance Presentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .slide h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        .slide h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .slide h3 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .slide ul {
+            padding-left: 30px;
+        }
+        
+        .slide li {
+            margin-bottom: 12px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(52, 73, 94, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title -->
+        <div class="slide" id="slide-1">
+            <div class="icon">☁️</div>
+            <h1>Cloud Governance</h1>
+            <h2>Managing Cloud Services Effectively</h2>
+            <div class="highlight">
+                <p style="text-align: center; font-size: 1.3em; margin: 0;">
+                    <strong>Today's Focus:</strong> Policies & Controls + Compliance & Risk Management
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Topic 1 Introduction -->
+        <div class="slide hidden" id="slide-2">
+            <h1>Topic 1: Policies, Procedures & Controls</h1>
+            <div class="icon">📋</div>
+            <div class="highlight">
+                <h3>What are Cloud Governance Policies?</h3>
+                <p>Policies, procedures, and controls are the foundation of cloud governance that manage the deployment, use, and security of cloud services within an organization.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Topic 1 Details -->
+        <div class="slide hidden" id="slide-3">
+            <h2>Policies, Procedures & Controls</h2>
+            <div class="two-column">
+                <div>
+                    <h3>🔒 Key Policies Include:</h3>
+                    <ul>
+                        <li><strong>Access Control:</strong> Who can access what resources</li>
+                        <li><strong>Data Classification:</strong> How sensitive data is handled</li>
+                        <li><strong>Resource Provisioning:</strong> How cloud resources are allocated</li>
+                        <li><strong>Security Standards:</strong> Encryption, monitoring, backup requirements</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>⚙️ Implementation Controls:</h3>
+                    <ul>
+                        <li><strong>Automated Approval Workflows</strong></li>
+                        <li><strong>Resource Tagging Requirements</strong></li>
+                        <li><strong>Cost Monitoring & Alerts</strong></li>
+                        <li><strong>Regular Security Audits</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Topic 1 Example -->
+        <div class="slide hidden" id="slide-4">
+            <h2>Real-World Example</h2>
+            <div class="highlight">
+                <h3>📊 Example Policy: Database Deployment</h3>
+                <p><strong>Policy:</strong> All production databases must be encrypted and require multi-factor authentication</p>
+                <p><strong>Procedure:</strong> Submit request → Security review → Automated deployment with encryption → Access granted after MFA setup</p>
+                <p><strong>Control:</strong> Automated scanning ensures no unencrypted databases can go live</p>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3>💡 Why This Matters:</h3>
+                <p>Without clear policies, organizations risk data breaches, compliance violations, and uncontrolled cloud spending that can reach thousands of dollars monthly.</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Topic 2 Introduction -->
+        <div class="slide hidden" id="slide-5">
+            <h1>Topic 2: Compliance & Risk Management</h1>
+            <div class="icon">🛡️</div>
+            <div class="highlight">
+                <h3>What is Cloud Compliance & Risk Management?</h3>
+                <p>The structured approach to managing risks and ensuring cloud operations meet regulatory requirements and industry standards.</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Topic 2 Details -->
+        <div class="slide hidden" id="slide-6">
+            <h2>Compliance & Risk Management</h2>
+            <div class="two-column">
+                <div>
+                    <h3>📜 Compliance Requirements:</h3>
+                    <ul>
+                        <li><strong>GDPR:</strong> Data protection in Europe</li>
+                        <li><strong>HIPAA:</strong> Healthcare data security</li>
+                        <li><strong>SOX:</strong> Financial reporting standards</li>
+                        <li><strong>Industry Standards:</strong> ISO 27001, SOC 2</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>⚠️ Risk Management Areas:</h3>
+                    <ul>
+                        <li><strong>Data Loss Prevention</strong></li>
+                        <li><strong>Vendor Lock-in Risks</strong></li>
+                        <li><strong>Service Availability</strong></li>
+                        <li><strong>Cost Overruns</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Topic 2 Implementation -->
+        <div class="slide hidden" id="slide-7">
+            <h2>Managing Compliance & Risk</h2>
+            <div class="highlight">
+                <h3>🔍 Risk Assessment Process:</h3>
+                <ol style="font-size: 1.1em; line-height: 1.8;">
+                    <li><strong>Identify:</strong> What could go wrong?</li>
+                    <li><strong>Assess:</strong> How likely and impactful?</li>
+                    <li><strong>Mitigate:</strong> What controls reduce risk?</li>
+                    <li><strong>Monitor:</strong> Continuous compliance checking</li>
+                </ol>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3>🎯 Practical Example:</h3>
+                <p><strong>Risk:</strong> Customer data stored in wrong geographic region violates GDPR</p>
+                <p><strong>Mitigation:</strong> Automated geo-restriction policies + regular compliance audits</p>
+            </div>
+        </div>
+
+        <!-- Slide 8: Connection & Conclusion -->
+        <div class="slide hidden" id="slide-8">
+            <h2>How These Topics Connect</h2>
+            <div class="highlight">
+                <h3>🔗 The Integration:</h3>
+                <p>Policies and procedures <strong>implement</strong> compliance requirements, while risk management <strong>validates</strong> that policies are working effectively.</p>
+            </div>
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h3>✅ Benefits of Good Governance:</h3>
+                    <ul>
+                        <li>Reduced security incidents</li>
+                        <li>Predictable cloud costs</li>
+                        <li>Faster compliance audits</li>
+                        <li>Better business alignment</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>❌ Risks of Poor Governance:</h3>
+                    <ul>
+                        <li>Data breaches & fines</li>
+                        <li>Unexpected cloud bills</li>
+                        <li>Failed compliance audits</li>
+                        <li>Shadow IT proliferation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Q&A -->
+        <div class="slide hidden" id="slide-9">
+            <div class="icon">❓</div>
+            <h1>Questions & Discussion</h1>
+            <div class="highlight">
+                <h3>Think About:</h3>
+                <ul style="font-size: 1.3em; line-height: 2;">
+                    <li>What policies might your organization need for cloud adoption?</li>
+                    <li>What compliance requirements apply to your industry?</li>
+                    <li>How would you identify and manage cloud-related risks?</li>
+                </ul>
+            </div>
+            <p style="text-align: center; font-size: 1.4em; margin-top: 40px;">
+                <strong>Thank you for your attention!</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-counter" id="slide-counter">Slide 1 of 9</div>
+
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 9;
+
+        function showSlide(n) {
+            // Hide all slides
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).classList.add('hidden');
+            }
+            
+            // Show current slide
+            document.getElementById(`slide-${n}`).classList.remove('hidden');
+            
+            // Update counter
+            document.getElementById('slide-counter').textContent = `Slide ${n} of ${totalSlides}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>
